@@ -12,9 +12,9 @@ from digitalio import DigitalInOut, Direction, Pull
 import supervisor
 
 # The pins connected to each switch/button
-buttonpins = [board.D3, board.D4, board.D5]
+buttonpins = [board.GP6]
 # The pins connected to each LED
-ledpins = [board.D2, board.D6, board.D7]
+ledpins = [board.GP4]
 
 # our array of button & LED objects
 buttons = []
@@ -53,14 +53,14 @@ print("Waiting for button presses")
 def pressbutton(index):
     switch_led = leds[index]  # find the switch LED
     k = buttonkeys[index]  # get the corresp. keycode/str
-    #switch_led.value = True  # turn on LED
+    switch_led.value = True  # turn on LED
     kbd.press(k)  # send keycode
 
 
 def releasebutton(index):
     switch_led = leds[index]  # find the switch LED
     k = buttonkeys[index]  # get the corresp. keycode/str
-    #switch_led.value = False  # turn on LED
+    switch_led.value = False  # turn on LED
     kbd.release(k)  # send keycode
 
 while True:
