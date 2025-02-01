@@ -15,14 +15,94 @@ from hid_gamepad import Gamepad
 
 gp = Gamepad(usb_hid.devices)
 
+upPin = board.GP4
+upGamepad = 1
+
+downPin = board.GP3
+downGamepad = 2
+
+bonk1Pin = board.GP5
+bonk1Gamepad = 3
+
+bonk2Pin = board.GP6
+bonk2Gamepad = 4
+
+HookPin = board.GP2
+HookPinGamepad = 5
+
+L1Pin = board.GP22
+L1Gamepad = 6
+
+L2LPin = board.GP20
+L2LGamepad = 7
+
+L2RPin = board.GP21
+L2RGamepad = 8
+
+L3LPin = board.GP18
+L3LGamepad = 9
+
+L3RPin = board.GP19
+L3RGamepad = 10
+
+RF1Pin = board.GP7
+RF1Gamepad = 11
+
+RF2Pin = board.GP8
+RF2Gamepad = 12
+
+RF3Pin = board.GP17
+RF3Gamepad = 13
+
+RF4Pin = board.GP16
+RF4Gamepad = 14
+
+RF5Pin = board.GP9
+RF5Gamepad = 15
+
+RF6Pin = board.GP10
+RF6Gamepad = 16
+
+
+
 # Create some buttons. The physical buttons are connected
 # to ground on one side and these and these pins on the other.
-button_pins = (board.D2, board.D3, board.D4, board.D5)
+button_pins = ( upPin,
+                downPin,
+                bonk1Pin,
+                bonk2Pin,
+                HookPin,
+                L1Pin,
+                L2LPin,
+                L2RPin,
+                L3LPin,
+                L3RPin,
+                RF1Pin,
+                RF2Pin,
+                RF3Pin,
+                RF4Pin,
+                RF5Pin,
+                RF6Pin)
 
 # Map the buttons to button numbers on the Gamepad.
 # gamepad_buttons[i] will send that button number when buttons[i]
 # is pushed.
-gamepad_buttons = (1, 2, 8, 15)
+gamepad_buttons = ( upGamepad,
+                    downGamepad,
+                    bonk1Gamepad,
+                    bonk2Gamepad,
+                    HookPinGamepad,
+                    L1Gamepad,
+                    L2LGamepad,
+                    L2RGamepad,
+                    L3LGamepad,
+                    L3RGamepad,
+                    RF1Gamepad,
+                    RF2Gamepad,
+                    RF3Gamepad,
+                    RF4Gamepad,
+                    RF5Gamepad,
+                    RF6Gamepad)
 
 buttons = [digitalio.DigitalInOut(pin) for pin in button_pins]
 for button in buttons:
