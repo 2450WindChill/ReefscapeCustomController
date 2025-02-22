@@ -10,7 +10,7 @@ RF3: pin 17 / ID 13
 
 RF4: pin 16 / ID 14
 
-RF5: pin 9 / !D 15
+RF5: pin 9 / ID 15
 
 RF6: pin 10 / ID 16
 
