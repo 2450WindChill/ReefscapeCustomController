@@ -1,5 +1,5 @@
 # 2450 Windchill Reefscape Custom Controller code
-
+Aux 1 and Aux 2 are NOT working due to a max limit of 16 buttons in the code, may fix later idk
 
 ### <u>Controller Pins/Code IDs:</u>
 RF1: pin 7,
@@ -34,6 +34,6 @@ Down: pin 3,
 
 Hook: pin 2,
 
-Aux1: 0,
+Aux1: pin 0 / NOT WORKING FOR NOW DUE TO BUTTON LIMIT OF 16
 
-Aux2: 1
+Aux2: pin 1 / NOT WORKING FOR NOW DUE TO BUTTON LIMIT OF 16
